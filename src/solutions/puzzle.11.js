@@ -1,13 +1,12 @@
 const SEP = ' ';
-const BLINK = 45;
 const MULT = 2024;
 const SEGMENT = 10000;
 
 export function solvePart1() {
-    let input = getInputItems();
-    let inputSegments = [input];
+    let inputSegments = [getInputItems(input)];
+    const blink = 25;
 
-    for (let i = 0; i < BLINK; i++) {
+    for (let i = 0; i < blink; i++) {
         // const start = performance.now();
         // console.debug('IN segments len: ', inputSegments?.length);
 
@@ -53,12 +52,76 @@ export function solvePart1() {
 }
 
 export function solvePart2() {
-    return 0;
+    let inputSegments = getInputItems(testInput).map(x => [x]);
+    const blink = 75;
+
+
+    for (let i = 0; i < blink; i++) {
+
+        for (let si = 0; si < 1; si++) {
+            const segment = inputSegments[si];
+
+            for (let index = 0; index < segment.length; index++) {
+                const element = +segment[index];
+
+                if (element == 0) {
+                    segment[index] = 1;
+                }
+                else if (element.toString().length % 2 == 0) {
+                    const firstPart = parseInt(element.toString().slice(0, element.toString().length / 2));
+                    const remainingPart = parseInt(element.toString().slice(element.toString().length / 2));
+                    segment[index] = firstPart;
+                    segment.splice(index + 1, 0, remainingPart);
+                    index++;
+                } else {
+                    segment[index] = element * MULT;
+                }
+            }
+        }
+    }
+
+    // for (let i = 0; i < blink; i++) {
+    //     // const start = performance.now();
+    //     // console.debug('IN segments len: ', inputSegments?.length);
+
+    //     for (let si = 0; si < inputSegments.length; si++) {
+    //         if (inputSegments[si].length > SEGMENT) {
+    //             const chunks = chunkArray(inputSegments[si], SEGMENT);
+    //             inputSegments.splice(si, 1, ...chunks);
+    //             si = si + chunks.length
+    //         }
+    //     }
+
+    //     for (let s = 0; s < inputSegments.length; s++) {
+    //         const segment = inputSegments[s];
+
+    //         for (let index = 0; index < segment.length; index++) {
+    //             const element = +segment[index];
+
+    //             if (element == 0) {
+    //                 segment[index] = 1;
+    //             }
+    //             else if (element.toString().length % 2 == 0) {
+    //                 const firstPart = parseInt(element.toString().slice(0, element.toString().length / 2));
+    //                 const remainingPart = parseInt(element.toString().slice(element.toString().length / 2));
+    //                 segment[index] = firstPart;
+    //                 segment.splice(index + 1, 0, remainingPart);
+    //                 index++;
+    //             } else {
+    //                 segment[index] = element * MULT;
+    //             }
+    //         }
+    //     }
+
+    // }
+
+
+    return inputSegments.flatMap(x => x).length;
 
 }
 
-function getInputItems() {
-    return testInput2.split(SEP).map(Number);
+function getInputItems(inp) {
+    return inp.split(SEP).map(Number);
 }
 
 function chunkArray(array, chunkSize) {

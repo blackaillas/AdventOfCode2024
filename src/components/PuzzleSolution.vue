@@ -10,6 +10,13 @@ import { solvePart1 as solvePu8Pa1, solvePart2 as solvePu8Pa2 } from '../solutio
 import { solvePart1 as solvePu9Pa1, solvePart2 as solvePu9Pa2 } from '../solutions/puzzle.9.js'
 import { solvePart1 as solvePu10Pa1, solvePart2 as solvePu10Pa2 } from '../solutions/puzzle.10.js'
 import { solvePart1 as solvePu11Pa1, solvePart2 as solvePu11Pa2 } from '../solutions/puzzle.11.js'
+import { solvePart1 as solvePu12Pa1, solvePart2 as solvePu12Pa2 } from '../solutions/puzzle.12.js'
+import { solvePart1 as solvePu13Pa1, solvePart2 as solvePu13Pa2 } from '../solutions/puzzle.13.js'
+import { solvePart1 as solvePu14Pa1, solvePart2 as solvePu14Pa2 } from '../solutions/puzzle.14.js'
+import { solvePart1 as solvePu15Pa1, solvePart2 as solvePu15Pa2 } from '../solutions/puzzle.15.js'
+import { solvePart1 as solvePu16Pa1, solvePart2 as solvePu16Pa2 } from '../solutions/puzzle.16.js'
+import { solvePart1 as solvePu17Pa1, solvePart2 as solvePu17Pa2 } from '../solutions/puzzle.17.js'
+import { solvePart1 as solvePu18Pa1, solvePart2 as solvePu18Pa2 } from '../solutions/puzzle.18.js'
 
 function solvePuzzle(id: number) {
     solutionValue.value = null;
@@ -79,6 +86,48 @@ function solvePuzzle(id: number) {
             solutionValue.value = solvePu11Pa1();
             if (measureTime.value === true) {
                 solutionTime.value = measureExecutionTime(solvePu11Pa1);
+            }
+            break;
+        case 12:
+            solutionValue.value = solvePu12Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu12Pa1);
+            }
+            break;
+        case 13:
+            solutionValue.value = solvePu13Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu13Pa1);
+            }
+            break;
+        case 14:
+            solutionValue.value = solvePu14Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu14Pa1);
+            }
+            break;
+        case 15:
+            solutionValue.value = solvePu15Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu15Pa1);
+            }
+            break;
+        case 16:
+            solutionValue.value = solvePu16Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu16Pa1);
+            }
+            break;
+        case 17:
+            solutionValue.value = solvePu17Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu17Pa1);
+            }
+            break;
+        case 18:
+            solutionValue.value = solvePu18Pa1();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu18Pa1);
             }
             break;
         default:
@@ -156,6 +205,48 @@ function solvePuzzle2(id: number) {
             solutionValue.value = solvePu11Pa2();
             if (measureTime.value === true) {
                 solutionTime.value = measureExecutionTime(solvePu11Pa2);
+            }
+            break;
+        case 12:
+            solutionValue.value = solvePu12Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu12Pa2);
+            }
+            break;
+        case 13:
+            solutionValue.value = solvePu13Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu13Pa2);
+            }
+            break;
+        case 14:
+            solutionValue.value = solvePu14Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu14Pa2);
+            }
+            break;
+        case 15:
+            solutionValue.value = solvePu15Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu15Pa2);
+            }
+            break;
+        case 16:
+            solutionValue.value = solvePu16Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu16Pa2);
+            }
+            break;
+        case 17:
+            solutionValue.value = solvePu17Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu17Pa2);
+            }
+            break;
+        case 18:
+            solutionValue.value = solvePu18Pa2();
+            if (measureTime.value === true) {
+                solutionTime.value = measureExecutionTime(solvePu18Pa2);
             }
             break;
         default:
